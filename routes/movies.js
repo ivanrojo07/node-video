@@ -9,13 +9,14 @@ function moviesApi(app) {
     const moviesService = new MoviesService();
 
     router.get('/', async function(req, res, next) {
-        const { tags } = req.query;
+        // const { tags } = req.query;
         try {
-            const movies = await moviesService.getMovies({tags});
-            res.json({
-                data: movies,
-                message: "movies listed"
-            });
+            throw Error('Nuevo error');
+            // const movies = await moviesService.getMovies({tags});
+            // res.json({
+            //     data: movies,
+            //     message: "movies listed"
+            // });
         }
         catch(err){
             next(err);
